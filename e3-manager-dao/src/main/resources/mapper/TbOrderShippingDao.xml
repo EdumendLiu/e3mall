@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbOrderShippingDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbOrderShipping" id="TbOrderShippingMap">
+    <resultMap type="com.lyb.e3mall.entity.TbOrderShipping" id="TbOrderShippingMap">
         <result property="orderid" column="orderid" jdbcType="VARCHAR"/>
         <result property="receiverName" column="receiver_name" jdbcType="VARCHAR"/>
         <result property="receiverPhone" column="receiver_phone" jdbcType="VARCHAR"/>
@@ -99,10 +99,10 @@
         insert into e3mall.tb_order_shipping(orderid, receiver_name, receiver_phone, receiver_mobile, receiver_state,
         receiver_city, receiver_district, receiver_address, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.orderid}, #{com.LYB.e3mall.entity.receiverName}, #{com.LYB.e3mall.entity.receiverPhone}, #{com.LYB.e3mall.entity.receiverMobile},
-            #{com.LYB.e3mall.entity.receiverState}, #{com.LYB.e3mall.entity.receiverCity}, #{com.LYB.e3mall.entity.receiverDistrict}, #{com.LYB.e3mall.entity.receiverAddress},
-            #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.orderid}, #{com.lyb.e3mall.entity.receiverName}, #{com.lyb.e3mall.entity.receiverPhone}, #{com.lyb.e3mall.entity.receiverMobile},
+            #{com.lyb.e3mall.entity.receiverState}, #{com.lyb.e3mall.entity.receiverCity}, #{com.lyb.e3mall.entity.receiverDistrict}, #{com.lyb.e3mall.entity.receiverAddress},
+            #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated})
         </foreach>
     </insert>
 
@@ -110,10 +110,10 @@
         insert into e3mall.tb_order_shipping(orderid, receiver_name, receiver_phone, receiver_mobile, receiver_state,
         receiver_city, receiver_district, receiver_address, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.orderid}, #{com.LYB.e3mall.entity.receiverName}, #{com.LYB.e3mall.entity.receiverPhone}, #{com.LYB.e3mall.entity.receiverMobile},
-            #{com.LYB.e3mall.entity.receiverState}, #{com.LYB.e3mall.entity.receiverCity}, #{com.LYB.e3mall.entity.receiverDistrict}, #{com.LYB.e3mall.entity.receiverAddress},
-            #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.orderid}, #{com.lyb.e3mall.entity.receiverName}, #{com.lyb.e3mall.entity.receiverPhone}, #{com.lyb.e3mall.entity.receiverMobile},
+            #{com.lyb.e3mall.entity.receiverState}, #{com.lyb.e3mall.entity.receiverCity}, #{com.lyb.e3mall.entity.receiverDistrict}, #{com.lyb.e3mall.entity.receiverAddress},
+            #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated})
         </foreach>
         on duplicate key update
         orderid = values(orderid) , receiver_name = values(receiver_name) , receiver_phone = values(receiver_phone) ,

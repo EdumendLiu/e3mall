@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbOrderDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbOrder" id="TbOrderMap">
+    <resultMap type="com.lyb.e3mall.entity.TbOrder" id="TbOrderMap">
         <result property="orderId" column="order_id" jdbcType="VARCHAR"/>
         <result property="payment" column="payment" jdbcType="VARCHAR"/>
         <result property="paymentType" column="payment_type" jdbcType="INTEGER"/>
@@ -144,11 +144,11 @@
         payment_time, consign_time, end_time, close_time, shipping_name, shipping_code, user_id, buyer_message,
         buyer_nick, buyer_rate)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.orderId}, #{com.LYB.e3mall.entity.payment}, #{com.LYB.e3mall.entity.paymentType}, #{com.LYB.e3mall.entity.postFee}, #{com.LYB.e3mall.entity.status},
-            #{com.LYB.e3mall.entity.createTime}, #{com.LYB.e3mall.entity.updateTime}, #{com.LYB.e3mall.entity.paymentTime}, #{com.LYB.e3mall.entity.consignTime}, #{com.LYB.e3mall.entity.endTime},
-            #{com.LYB.e3mall.entity.closeTime}, #{com.LYB.e3mall.entity.shippingName}, #{com.LYB.e3mall.entity.shippingCode}, #{com.LYB.e3mall.entity.userId},
-            #{com.LYB.e3mall.entity.buyerMessage}, #{com.LYB.e3mall.entity.buyerNick}, #{com.LYB.e3mall.entity.buyerRate})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.orderId}, #{com.lyb.e3mall.entity.payment}, #{com.lyb.e3mall.entity.paymentType}, #{com.lyb.e3mall.entity.postFee}, #{com.lyb.e3mall.entity.status},
+            #{com.lyb.e3mall.entity.createTime}, #{com.lyb.e3mall.entity.updateTime}, #{com.lyb.e3mall.entity.paymentTime}, #{com.lyb.e3mall.entity.consignTime}, #{com.lyb.e3mall.entity.endTime},
+            #{com.lyb.e3mall.entity.closeTime}, #{com.lyb.e3mall.entity.shippingName}, #{com.lyb.e3mall.entity.shippingCode}, #{com.lyb.e3mall.entity.userId},
+            #{com.lyb.e3mall.entity.buyerMessage}, #{com.lyb.e3mall.entity.buyerNick}, #{com.lyb.e3mall.entity.buyerRate})
         </foreach>
     </insert>
 
@@ -157,11 +157,11 @@
         payment_time, consign_time, end_time, close_time, shipping_name, shipping_code, user_id, buyer_message,
         buyer_nick, buyer_rate)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.orderId}, #{com.LYB.e3mall.entity.payment}, #{com.LYB.e3mall.entity.paymentType}, #{com.LYB.e3mall.entity.postFee}, #{com.LYB.e3mall.entity.status},
-            #{com.LYB.e3mall.entity.createTime}, #{com.LYB.e3mall.entity.updateTime}, #{com.LYB.e3mall.entity.paymentTime}, #{com.LYB.e3mall.entity.consignTime}, #{com.LYB.e3mall.entity.endTime},
-            #{com.LYB.e3mall.entity.closeTime}, #{com.LYB.e3mall.entity.shippingName}, #{com.LYB.e3mall.entity.shippingCode}, #{com.LYB.e3mall.entity.userId},
-            #{com.LYB.e3mall.entity.buyerMessage}, #{com.LYB.e3mall.entity.buyerNick}, #{com.LYB.e3mall.entity.buyerRate})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.orderId}, #{com.lyb.e3mall.entity.payment}, #{com.lyb.e3mall.entity.paymentType}, #{com.lyb.e3mall.entity.postFee}, #{com.lyb.e3mall.entity.status},
+            #{com.lyb.e3mall.entity.createTime}, #{com.lyb.e3mall.entity.updateTime}, #{com.lyb.e3mall.entity.paymentTime}, #{com.lyb.e3mall.entity.consignTime}, #{com.lyb.e3mall.entity.endTime},
+            #{com.lyb.e3mall.entity.closeTime}, #{com.lyb.e3mall.entity.shippingName}, #{com.lyb.e3mall.entity.shippingCode}, #{com.lyb.e3mall.entity.userId},
+            #{com.lyb.e3mall.entity.buyerMessage}, #{com.lyb.e3mall.entity.buyerNick}, #{com.lyb.e3mall.entity.buyerRate})
         </foreach>
         on duplicate key update
         order_id = values(order_id) , payment = values(payment) , payment_type = values(payment_type) , post_fee =

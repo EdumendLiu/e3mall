@@ -20,6 +20,6 @@
     <!-- 引用dubbo服务 -->
     <dubbo:application name="e3-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="92.168.248.130"/>
-    <dubbo:reference interface="com.LYB.e3mall.entity.service.TbUserService" id="tbUserService" />
+    <dubbo:reference interface="com.lybe3mall.service.TbUserService" id="tbUserService" />
 
 </beans>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbOrderItemDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbOrderItem" id="TbOrderItemMap">
+    <resultMap type="com.lyb.e3mall.entity.TbOrderItem" id="TbOrderItemMap">
         <result property="id" column="id" jdbcType="VARCHAR"/>
         <result property="itemId" column="item_id" jdbcType="VARCHAR"/>
         <result property="num" column="num" jdbcType="VARCHAR"/>
@@ -77,18 +77,18 @@
     <insert id="insertBatch" keyProperty="" useGeneratedKeys="true">
         insert into e3mall.tb_order_item(id, item_id, num, title, price, total_fee, pic_path)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.id}, #{com.LYB.e3mall.entity.itemId}, #{com.LYB.e3mall.entity.num}, #{com.LYB.e3mall.entity.title}, #{com.LYB.e3mall.entity.price}, #{com.LYB.e3mall.entity.totalFee},
-            #{com.LYB.e3mall.entity.picPath})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.id}, #{com.lyb.e3mall.entity.itemId}, #{com.lyb.e3mall.entity.num}, #{com.lyb.e3mall.entity.title}, #{com.lyb.e3mall.entity.price}, #{com.lyb.e3mall.entity.totalFee},
+            #{com.lyb.e3mall.entity.picPath})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="" useGeneratedKeys="true">
         insert into e3mall.tb_order_item(id, item_id, num, title, price, total_fee, pic_path)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.id}, #{com.LYB.e3mall.entity.itemId}, #{com.LYB.e3mall.entity.num}, #{com.LYB.e3mall.entity.title}, #{com.LYB.e3mall.entity.price}, #{com.LYB.e3mall.entity.totalFee},
-            #{com.LYB.e3mall.entity.picPath})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.id}, #{com.lyb.e3mall.entity.itemId}, #{com.lyb.e3mall.entity.num}, #{com.lyb.e3mall.entity.title}, #{com.lyb.e3mall.entity.price}, #{com.lyb.e3mall.entity.totalFee},
+            #{com.lyb.e3mall.entity.picPath})
         </foreach>
         on duplicate key update
         id = values(id) , item_id = values(item_id) , num = values(num) , title = values(title) , price = values(price)

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbUserDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbUser" id="TbUserMap">
+    <resultMap type="com.lyb.e3mall.entity.TbUser" id="TbUserMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="username" column="username" jdbcType="VARCHAR"/>
         <result property="password" column="password" jdbcType="VARCHAR"/>
@@ -77,18 +77,18 @@
     <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_user(username, password, phone, email, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.username}, #{com.LYB.e3mall.entity.password}, #{com.LYB.e3mall.entity.phone}, #{com.LYB.e3mall.entity.email}, #{com.LYB.e3mall.entity.created},
-            #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.username}, #{com.lyb.e3mall.entity.password}, #{com.lyb.e3mall.entity.phone}, #{com.lyb.e3mall.entity.email}, #{com.lyb.e3mall.entity.created},
+            #{com.lyb.e3mall.entity.updated})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_user(username, password, phone, email, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.username}, #{com.LYB.e3mall.entity.password}, #{com.LYB.e3mall.entity.phone}, #{com.LYB.e3mall.entity.email}, #{com.LYB.e3mall.entity.created},
-            #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.username}, #{com.lyb.e3mall.entity.password}, #{com.lyb.e3mall.entity.phone}, #{com.lyb.e3mall.entity.email}, #{com.lyb.e3mall.entity.created},
+            #{com.lyb.e3mall.entity.updated})
         </foreach>
         on duplicate key update
         username = values(username) , password = values(password) , phone = values(phone) , email = values(email) ,

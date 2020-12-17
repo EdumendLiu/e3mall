@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbContentCategoryDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbContentCategory" id="TbContentCategoryMap">
+    <resultMap type="com.lyb.e3mall.entity.TbContentCategory" id="TbContentCategoryMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
@@ -83,18 +83,18 @@
     <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_content_category(parent_id, name, status, sort_order, is_parent, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.parentId}, #{com.LYB.e3mall.entity.name}, #{com.LYB.e3mall.entity.status}, #{com.LYB.e3mall.entity.sortOrder}, #{com.LYB.e3mall.entity.isParent},
-            #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.parentId}, #{com.lyb.e3mall.entity.name}, #{com.lyb.e3mall.entity.status}, #{com.lyb.e3mall.entity.sortOrder}, #{com.lyb.e3mall.entity.isParent},
+            #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_content_category(parent_id, name, status, sort_order, is_parent, created, updated)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.parentId}, #{com.LYB.e3mall.entity.name}, #{com.LYB.e3mall.entity.status}, #{com.LYB.e3mall.entity.sortOrder}, #{com.LYB.e3mall.entity.isParent},
-            #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.parentId}, #{com.lyb.e3mall.entity.name}, #{com.lyb.e3mall.entity.status}, #{com.lyb.e3mall.entity.sortOrder}, #{com.lyb.e3mall.entity.isParent},
+            #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated})
         </foreach>
         on duplicate key update
         parent_id = values(parent_id) , name = values(name) , status = values(status) , sort_order = values(sort_order)

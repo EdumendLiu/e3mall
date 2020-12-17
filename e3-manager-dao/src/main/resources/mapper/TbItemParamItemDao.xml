@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace=".TbItemParamItemDao">
 
-    <resultMap type="com.LYB.e3mall.entity.TbItemParamItem" id="TbItemParamItemMap">
+    <resultMap type="com.lyb.e3mall.entity.TbItemParamItem" id="TbItemParamItemMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="itemId" column="item_id" jdbcType="INTEGER"/>
         <result property="created" column="created" jdbcType="TIMESTAMP"/>
@@ -65,16 +65,16 @@
     <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_item_param_item(item_id, created, updated, param_data)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.itemId}, #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated}, #{com.LYB.e3mall.entity.paramData})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.itemId}, #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated}, #{com.lyb.e3mall.entity.paramData})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
         insert into e3mall.tb_item_param_item(item_id, created, updated, param_data)
         values
-        <foreach collection="entities" item="com.LYB.e3mall.entity" separator=",">
-            (#{com.LYB.e3mall.entity.itemId}, #{com.LYB.e3mall.entity.created}, #{com.LYB.e3mall.entity.updated}, #{com.LYB.e3mall.entity.paramData})
+        <foreach collection="entities" item="com.lyb.e3mall.entity" separator=",">
+            (#{com.lyb.e3mall.entity.itemId}, #{com.lyb.e3mall.entity.created}, #{com.lyb.e3mall.entity.updated}, #{com.lyb.e3mall.entity.paramData})
         </foreach>
         on duplicate key update
         item_id = values(item_id) , created = values(created) , updated = values(updated) , param_data =
