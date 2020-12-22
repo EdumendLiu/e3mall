@@ -2,7 +2,7 @@ package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbUser;
 import com.lyb.e3mall.dao.TbUserDao;
-import com.lybe3mall.service.TbUserService;
+import com.lyb.e3mall.service.TbUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

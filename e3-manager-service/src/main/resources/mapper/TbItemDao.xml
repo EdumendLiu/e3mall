@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace=".TbItemDao">
+<mapper namespace="com.lyb.e3mall.dao.TbItemDao">
 
     <resultMap type="com.lyb.e3mall.entity.TbItem" id="TbItemMap">
         <result property="id" column="id" jdbcType="INTEGER"/>

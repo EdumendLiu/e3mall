@@ -13,7 +13,7 @@
         <module>e3-manager-interface</module>
         <module>e3-manager-pojo</module>
         <module>e3-manager-service</module>
-        <module>e3-manager-dao</module>
+<!--        <module>e3-manager-dao</module>-->
         <module>e3-manager-web</module>
 
     </modules>
@@ -223,11 +223,11 @@
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>activemq-all</artifactId>
-                <version>${activemq.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.activemq</groupId>-->
+<!--                <artifactId>activemq-all</artifactId>-->
+<!--                <version>${activemq.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.freemarker</groupId>
                 <artifactId>freemarker</artifactId>

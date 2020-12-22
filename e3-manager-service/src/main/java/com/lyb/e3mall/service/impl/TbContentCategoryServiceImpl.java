@@ -2,7 +2,7 @@ package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbContentCategory;
 import com.lyb.e3mall.dao.TbContentCategoryDao;
-import com.lybe3mall.service.TbContentCategoryService;
+import com.lyb.e3mall.service.TbContentCategoryService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

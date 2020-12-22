@@ -2,7 +2,7 @@ package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbOrderShipping;
 import com.lyb.e3mall.dao.TbOrderShippingDao;
-import com.lybe3mall.service.TbOrderShippingService;
+import com.lyb.e3mall.service.TbOrderShippingService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

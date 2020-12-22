@@ -1,7 +1,7 @@
 package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbItemDesc;
-import com.lybe3mall.service.TbItemDescService;
+import com.lyb.e3mall.service.TbItemDescService;
 import com.lyb.e3mall.dao.TbItemDescDao;
 import org.springframework.stereotype.Service;
 

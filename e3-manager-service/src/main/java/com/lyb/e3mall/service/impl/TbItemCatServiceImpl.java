@@ -1,7 +1,7 @@
 package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbItemCat;
-import com.lybe3mall.service.TbItemCatService;
+import com.lyb.e3mall.service.TbItemCatService;
 import com.lyb.e3mall.dao.TbItemCatDao;
 import org.springframework.stereotype.Service;
 

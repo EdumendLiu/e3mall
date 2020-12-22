@@ -2,7 +2,7 @@ package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbItemParamItem;
 import com.lyb.e3mall.dao.TbItemParamItemDao;
-import com.lybe3mall.service.TbItemParamItemService;
+import com.lyb.e3mall.service.TbItemParamItemService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
