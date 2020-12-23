@@ -1,7 +1,7 @@
 package com.lyb.e3mall.controller;
 
 import com.lyb.e3mall.entity.TbUser;
-import com.lybe3mall.service.TbUserService;
+import com.lyb.e3mall.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
