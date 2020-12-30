@@ -1,16 +1,16 @@
-package com.lyb.e3mall.service;
+package com.lyb.e3mall.service.impl;
 
-import com.lyb.e3mall.entity.TbContentCategory;
+import com.lyb.e3mall.entity.TbUser;
 
 import java.util.List;
 
 /**
- * (TbContentCategory)表服务接口
+ * (TbUser)表服务接口
  *
  * @author makejava
- * @since 2020-12-07 18:34:38
+ * @since 2020-12-07 18:35:00
  */
-public interface TbContentCategoryService {
+public interface TbUserService {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +18,7 @@ public interface TbContentCategoryService {
      * @param id 主键
      * @return 实例对象
      */
-    TbContentCategory queryById(Integer id);
+    TbUser queryById(Integer id);
 
     /**
      * 查询多条数据
@@ -27,23 +27,23 @@ public interface TbContentCategoryService {
      * @param limit  查询条数
      * @return 对象列表
      */
-    List<TbContentCategory> queryAllByLimit(int offset, int limit);
+    List<TbUser> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param tbContentCategory 实例对象
+     * @param tbUser 实例对象
      * @return 实例对象
      */
-    TbContentCategory insert(TbContentCategory tbContentCategory);
+    TbUser insert(TbUser tbUser);
 
     /**
      * 修改数据
      *
-     * @param tbContentCategory 实例对象
+     * @param tbUser 实例对象
      * @return 实例对象
      */
-    TbContentCategory update(TbContentCategory tbContentCategory);
+    TbUser update(TbUser tbUser);
 
     /**
      * 通过主键删除数据

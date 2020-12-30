@@ -1,16 +1,16 @@
-package com.lyb.e3mall.service;
+package com.lyb.e3mall.service.impl;
 
-import com.lyb.e3mall.entity.TbItemParamItem;
+import com.lyb.e3mall.entity.TbItemParam;
 
 import java.util.List;
 
 /**
- * (TbItemParamItem)表服务接口
+ * (TbItemParam)表服务接口
  *
  * @author makejava
- * @since 2020-12-07 18:34:51
+ * @since 2020-12-07 18:34:48
  */
-public interface TbItemParamItemService {
+public interface TbItemParamService {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +18,7 @@ public interface TbItemParamItemService {
      * @param id 主键
      * @return 实例对象
      */
-    TbItemParamItem queryById(Integer id);
+    TbItemParam queryById(Integer id);
 
     /**
      * 查询多条数据
@@ -27,23 +27,23 @@ public interface TbItemParamItemService {
      * @param limit  查询条数
      * @return 对象列表
      */
-    List<TbItemParamItem> queryAllByLimit(int offset, int limit);
+    List<TbItemParam> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param tbItemParamItem 实例对象
+     * @param tbItemParam 实例对象
      * @return 实例对象
      */
-    TbItemParamItem insert(TbItemParamItem tbItemParamItem);
+    TbItemParam insert(TbItemParam tbItemParam);
 
     /**
      * 修改数据
      *
-     * @param tbItemParamItem 实例对象
+     * @param tbItemParam 实例对象
      * @return 实例对象
      */
-    TbItemParamItem update(TbItemParamItem tbItemParamItem);
+    TbItemParam update(TbItemParam tbItemParam);
 
     /**
      * 通过主键删除数据

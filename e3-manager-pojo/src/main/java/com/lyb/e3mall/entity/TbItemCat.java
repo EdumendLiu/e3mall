@@ -3,18 +3,10 @@ package com.lyb.e3mall.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * (TbItemCat)实体类
- *
- * @author makejava
- * @since 2020-12-07 18:34:43
- */
-public class TbItemCat implements Serializable {
-    private static final long serialVersionUID = 421147894710287666L;
+public class TbItemCat implements Serializable{
+    private Long id;
 
-    private Integer id;
-
-    private Integer parentId;
+    private Long parentId;
 
     private String name;
 
@@ -22,26 +14,25 @@ public class TbItemCat implements Serializable {
 
     private Integer sortOrder;
 
-    private Integer isParent;
+    private Boolean isParent;
 
     private Date created;
 
     private Date updated;
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getParentId() {
+    public Long getParentId() {
         return parentId;
     }
 
-    public void setParentId(Integer parentId) {
+    public void setParentId(Long parentId) {
         this.parentId = parentId;
     }
 
@@ -50,7 +41,7 @@ public class TbItemCat implements Serializable {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getStatus() {
@@ -69,11 +60,11 @@ public class TbItemCat implements Serializable {
         this.sortOrder = sortOrder;
     }
 
-    public Integer getIsParent() {
+    public Boolean getIsParent() {
         return isParent;
     }
 
-    public void setIsParent(Integer isParent) {
+    public void setIsParent(Boolean isParent) {
         this.isParent = isParent;
     }
 
@@ -92,5 +83,4 @@ public class TbItemCat implements Serializable {
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
-
 }

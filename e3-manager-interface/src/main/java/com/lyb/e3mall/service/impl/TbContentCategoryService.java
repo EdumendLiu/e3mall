@@ -1,16 +1,16 @@
-package com.lyb.e3mall.service;
+package com.lyb.e3mall.service.impl;
 
-import com.lyb.e3mall.entity.TbContent;
+import com.lyb.e3mall.entity.TbContentCategory;
 
 import java.util.List;
 
 /**
- * (TbContent)表服务接口
+ * (TbContentCategory)表服务接口
  *
  * @author makejava
- * @since 2020-12-07 18:33:41
+ * @since 2020-12-07 18:34:38
  */
-public interface TbContentService {
+public interface TbContentCategoryService {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +18,7 @@ public interface TbContentService {
      * @param id 主键
      * @return 实例对象
      */
-    TbContent queryById(Integer id);
+    TbContentCategory queryById(Integer id);
 
     /**
      * 查询多条数据
@@ -27,23 +27,23 @@ public interface TbContentService {
      * @param limit  查询条数
      * @return 对象列表
      */
-    List<TbContent> queryAllByLimit(int offset, int limit);
+    List<TbContentCategory> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param tbContent 实例对象
+     * @param tbContentCategory 实例对象
      * @return 实例对象
      */
-    TbContent insert(TbContent tbContent);
+    TbContentCategory insert(TbContentCategory tbContentCategory);
 
     /**
      * 修改数据
      *
-     * @param tbContent 实例对象
+     * @param tbContentCategory 实例对象
      * @return 实例对象
      */
-    TbContent update(TbContent tbContent);
+    TbContentCategory update(TbContentCategory tbContentCategory);
 
     /**
      * 通过主键删除数据

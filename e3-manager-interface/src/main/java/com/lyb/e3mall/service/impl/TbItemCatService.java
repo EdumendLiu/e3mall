@@ -1,16 +1,16 @@
-package com.lyb.e3mall.service;
+package com.lyb.e3mall.service.impl;
 
-import com.lyb.e3mall.entity.TbItemParam;
+import com.lyb.e3mall.entity.TbItemCat;
 
 import java.util.List;
 
 /**
- * (TbItemParam)表服务接口
+ * (TbItemCat)表服务接口
  *
  * @author makejava
- * @since 2020-12-07 18:34:48
+ * @since 2020-12-07 18:34:44
  */
-public interface TbItemParamService {
+public interface TbItemCatService {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +18,7 @@ public interface TbItemParamService {
      * @param id 主键
      * @return 实例对象
      */
-    TbItemParam queryById(Integer id);
+    TbItemCat queryById(Integer id);
 
     /**
      * 查询多条数据
@@ -27,23 +27,23 @@ public interface TbItemParamService {
      * @param limit  查询条数
      * @return 对象列表
      */
-    List<TbItemParam> queryAllByLimit(int offset, int limit);
+    List<TbItemCat> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param tbItemParam 实例对象
+     * @param tbItemCat 实例对象
      * @return 实例对象
      */
-    TbItemParam insert(TbItemParam tbItemParam);
+    TbItemCat insert(TbItemCat tbItemCat);
 
     /**
      * 修改数据
      *
-     * @param tbItemParam 实例对象
+     * @param tbItemCat 实例对象
      * @return 实例对象
      */
-    TbItemParam update(TbItemParam tbItemParam);
+    TbItemCat update(TbItemCat tbItemCat);
 
     /**
      * 通过主键删除数据

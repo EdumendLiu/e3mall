@@ -1,4 +1,4 @@
-package com.lyb.e3mall.service;
+package com.lyb.e3mall.service.impl;
 
 import com.lyb.e3mall.entity.TbItemDesc;
 
