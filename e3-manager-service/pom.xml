@@ -93,6 +93,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
         </dependency>
+
     </dependencies>
     <build>
         <finalName>manager-service</finalName>
