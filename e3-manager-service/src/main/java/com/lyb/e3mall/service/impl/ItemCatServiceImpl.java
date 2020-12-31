@@ -38,7 +38,7 @@ public class ItemCatServiceImpl implements ItemCatService {
             node.setId(i.getId());
             node.setText(i.getName());
             //三目表达式 前面真假决定值，tbItemCat.getIsParent()应该是boolean，这里为何是integer
-            node.setState(i.getIsParent() ? "closted":"open");
+            node.setState(i.getIsParent()? "closed":"open");
 
             resultList.add(node);
         }
