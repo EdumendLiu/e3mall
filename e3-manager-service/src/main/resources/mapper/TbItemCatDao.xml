@@ -4,10 +4,11 @@
 
     <resultMap type="com.lyb.e3mall.entity.TbItemCat" id="TbItemCatMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="parentId" column="parent_id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="status" column="status" jdbcType="VARCHAR"/>
-        <result property="sortOrder" column="sort_order" jdbcType="VARCHAR"/>
-        <result property="isParent" column="is_parent" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="sortOrder" column="sort_order" jdbcType="INTEGER"/>
+        <result property="isParent" column="is_parent" jdbcType="INTEGER"/>
         <result property="created" column="created" jdbcType="TIMESTAMP"/>
         <result property="updated" column="updated" jdbcType="TIMESTAMP"/>
     </resultMap><!--通过实体作为筛选条件查询-->
