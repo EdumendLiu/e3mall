@@ -12,7 +12,7 @@ import java.util.Date;
 public class TbItem implements Serializable {
     private static final long serialVersionUID = -56149753232498430L;
 
-    private Integer id;
+    private Long id;
 
     private String title;
 
@@ -35,11 +35,11 @@ public class TbItem implements Serializable {
     private Date updated;
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

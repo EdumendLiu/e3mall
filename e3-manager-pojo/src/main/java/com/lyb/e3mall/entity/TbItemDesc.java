@@ -12,7 +12,7 @@ import java.util.Date;
 public class TbItemDesc implements Serializable {
     private static final long serialVersionUID = 653346590344774093L;
 
-    private Integer itemId;
+    private Long itemId;
 
     private Date created;
 
@@ -21,11 +21,11 @@ public class TbItemDesc implements Serializable {
     private String itemDesc;
 
 
-    public Integer getItemId() {
+    public Long getItemId() {
         return itemId;
     }
 
-    public void setItemId(Integer itemId) {
+    public void setItemId(Long itemId) {
         this.itemId = itemId;
     }
 

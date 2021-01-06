@@ -9,6 +9,6 @@ public interface TbItemDao {
 
 
     List<TbItem> queryAll(TbItem example);
-
+    int insert(TbItem record);
 
 }

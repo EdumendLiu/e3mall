@@ -1,10 +1,15 @@
 package com.lyb.e3mall.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import com.lyb.e3mall.common.pojo.EasyUIDataGridResult;
+import com.lyb.e3mall.common.utils.E3Result;
+import com.lyb.e3mall.common.utils.IDUtils;
 import com.lyb.e3mall.dao.TbItemDao;
+import com.lyb.e3mall.dao.TbItemDescDao;
 import com.lyb.e3mall.entity.TbItem;
+import com.lyb.e3mall.entity.TbItemDesc;
 import com.lyb.e3mall.entity.TbItemExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +28,8 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemDao itemMapper;
+	@Autowired
+	private TbItemDescDao itemDescMapper;
 	
 @Override
 public TbItem getItemById(long itemId) {
@@ -56,6 +63,30 @@ public TbItem getItemById(long itemId) {
 		long total = pageInfo.getTotal();
 		result.setTotal(total);
 		return result;
+	}
+	@Override
+	public E3Result addItem(TbItem item, String desc) {
+		//生成商品id
+		long itemId = IDUtils.genItemId();
+		//补全item的属性
+		item.setId(itemId);
+		//1-正常，2-下架，3-删除
+		item.setStatus("1");
+		item.setCreated(new Date());
+		item.setUpdated(new Date());
+		//向商品表插入数据
+		itemMapper.insert(item);
+		//创建一个商品描述表对应的pojo对象。
+		TbItemDesc itemDesc = new TbItemDesc();
+		//补全属性
+		itemDesc.setItemId(itemId);
+		itemDesc.setItemDesc(desc);
+		itemDesc.setCreated(new Date());
+		itemDesc.setUpdated(new Date());
+		//向商品描述表插入数据
+		itemDescMapper.insert(itemDesc);
+		//返回成功
+		return E3Result.ok();
 	}
 
 }
